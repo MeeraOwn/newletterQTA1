@@ -21,22 +21,31 @@
         }
 
         .header {
-            background-color: #e3e3e3;
-            padding: 10px;
-            text-align: center;
+            /* background: #e3e3e3; */
+            background: linear-gradient(90deg, #f3edfa, #b78ceb);
+            /* Light gray for subtle design */
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            /* Align logo left, content right */
+            align-items: center;
+            border-bottom: 2px solid #d1d1d1;
         }
 
         .header img {
-            max-width: 150px;
+            max-width: 120px;
+            /* Resize logo for a cleaner look */
             height: auto;
         }
 
         .header span {
-            display: block;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
-            margin-top: 10px;
+            color: #333;
+            /* Neutral text color */
+            text-align: right;
         }
+
 
         .main-content {
             padding: 20px;
@@ -52,108 +61,95 @@
         .main-content img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
         }
 
-        .middle {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #02a8e1;
-            padding: 10px 20px;
-        }
-
-        .shop-online {
-            color: white;
-            font-size: 20px;
-            margin: 0;
-            font-family: "Helvetica", Arial, sans-serif;
-        }
-
-        .search-form {
-            display: inline-flex;
-            align-items: center;
-            border: 2px solid #02a8e1;
-            border-radius: 25px;
-            overflow: hidden;
-            background-color: white;
-            padding: 5px 10px;
-            width: 50%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .search-form input[type="text"] {
-            flex: 1;
-            border: none;
-            outline: none;
-            padding: 8px 15px;
-            font-size: 16px;
-            border-radius: 0;
-            font-family: "Helvetica", Arial, sans-serif;
-        }
-
-        .search-form button {
-            background-color: transparent;
-            color: #02a8e1;
-            border: none;
-            outline: none;
-            padding: 0 15px;
-            font-size: 20px;
-            cursor: pointer;
-            font-family: "Helvetica", Arial, sans-serif;
-            transition: color 0.3s;
-        }
-
-        .search-form button:hover {
-            color: #016e98;
+        .middle img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
 
         .footer {
-            background-color: #034c90;
+            background-color: #11053B;
+            /* Brand dark color */
             color: white;
             padding: 20px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            text-align: left;
+            justify-content: space-between;
+            /* Align sections horizontally */
             gap: 20px;
+            /* Add spacing between sections */
+            flex-wrap: wrap;
+            /* Adjust for smaller screens */
         }
 
         .footer-section {
-            /* flex: 1; */
-            min-width: 200px;
+            flex: 1;
+            /* Equal width for all sections */
+            min-width: 150px;
+            /* Prevent sections from shrinking too much */
+            text-align: left;
+            /* Align text to the left */
         }
 
         .footer h6 {
-            font-size: 18px;
+            font-size: 14px;
             margin-bottom: 10px;
-            margin-top: 20px;
+            text-transform: uppercase;
+            /* Consistent styling */
+            border-bottom: 1px solid #4A148C;
+            /* Section separator */
+            padding-bottom: 5px;
         }
 
         .footer a {
             color: white;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 12px;
             margin-bottom: 5px;
+            display: block;
         }
 
         .footer a:hover {
             text-decoration: underline;
         }
 
-        .follow-us-section p {
-            font-size: 16px;
-            margin-top: 10px;
+        .social {
+            display: flex;
+            gap: 10px;
         }
 
-        .bi {
-            font-size: 20px;
-            margin: 0 5px;
-            color: white;
+        .social img {
+            width: 25px;
+            height: 25px;
         }
 
-        .bi:hover {
-            color: #02a8e1;
+
+        @media (max-width: 768px) {
+            .footer {
+                display: flex;
+                text-align: left;
+                gap: 1px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header span {
+                font-size: 12px;
+            }
+
+            .footer h6 {
+                font-size: 12px;
+            }
+
+            .footer a {
+                font-size: 10px;
+            }
+
+            .follow-us-section img {
+                width: 20px;
+                height: 20px;
+            }
         }
     </style>
 </head>
@@ -185,47 +181,38 @@
 
         <!-- Middle Section -->
         <div class="middle">
-            <p class="shop-online"><b>Shop Online</b></p>
-            <form action="https://www.express-technology.com/Part-search/" method="get" target="_blank"
-                class="search-form">
-                <input type="text" name="search" placeholder="Search..." />
-                <button type="submit" aria-label="Search">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
+            <a href="https://www.express-technology.com/" target="_blank">
+                <img src="search.png" alt="Search Image" />
+            </a>
         </div>
 
         <!-- Footer Section -->
         <div class="footer">
             <div class="footer-section">
-                <!-- Left Section: INFORMATION -->
-                <div class="info-section">
-                    <h6>INFORMATION</h6>
-                    <a href="https://www.express-technology.com/ProductIndex/" target="_blank">Product Index</a><br />
-                    <a href="mailto:customerservice@express-technology.com" target="_blank">Customer Service</a><br />
-                    <a href="https://www.express-technology.com/Aboutus/" target="_blank">About Us</a>
-                </div>
+                <h6>INFORMATION</h6>
+                <a href="https://www.express-technology.com/ProductIndex/" target="_blank">Product Index</a>
+                <a href="mailto:customerservice@express-technology.com" target="_blank">Customer Service</a>
+                <a href="https://www.express-technology.com/Aboutus/" target="_blank">About Us</a>
             </div>
-
             <div class="footer-section">
-                <!-- Right Section: WHY BUY FROM US and Follow Us -->
-                <div class="why-buy-section">
-                    <h6>WHY BUY FROM US</h6>
-                    <a href="https://www.express-technology.com/ProductIndex/" target="_blank">Wide Selection</a><br />
-                    <a href="https://www.express-technology.com/" target="_blank">Best Prices</a><br />
-                    <a href="https://www.express-technology.com/" target="_blank">Fast Delivery</a>
+                <h6>WHY BUY FROM US</h6>
+                <a href="https://www.express-technology.com/ProductIndex/" target="_blank">Wide Selection</a>
+                <a href="https://www.express-technology.com/" target="_blank">Best Prices</a>
+                <a href="https://www.express-technology.com/" target="_blank">Fast Delivery</a>
+            </div>
+            <div class="footer-section follow-us-section">
 
-                    <h6>Follow Us</h6>
-                    <div style="display: flex">
-                        <a style="margin-right: 10px" href="#"><img
-                                src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"
-                                style="width: 20px; height: 20px" /></a>
-                        <a style="margin-right: 10px" href="#"><img
-                                src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter"
-                                style="width: 20px; height: 20px" /></a>
-                        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn"
-                                style="width: 20px; height: 20px" /></a>
-                    </div>
+                <h6>Follow Us</h6>
+                <div class="social">
+                    <a href="https://www.facebook.com/ExpressTechnologyGroup" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/express-technology-group/" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn" />
+                    </a>
                 </div>
             </div>
         </div>
